@@ -14,7 +14,7 @@ from webots_ros2_driver.webots_launcher import WebotsLauncher, Ros2SupervisorLau
 def get_ros2_nodes(*args):
 
     # Parameters
-    package_dir = get_package_share_directory('webots_sim')
+    package_dir = get_package_share_directory('tb4_sim')
     tb4_xacro_path = os.path.join(package_dir, 'resource', 'tb4_webots.xacro')
     tb4_description = xacro.process_file(tb4_xacro_path, mappings={'name': 'turtlebot4'}).toxml()
     ros2_control_params = os.path.join(package_dir, 'resource', 'tb4_control.yaml')
@@ -107,7 +107,7 @@ def get_ros2_nodes(*args):
     ]
 
 def generate_launch_description():
-    package_dir = get_package_share_directory('webots_sim')
+    package_dir = get_package_share_directory('tb4_sim')
     world = LaunchConfiguration('world')
 
     # Starts Webots

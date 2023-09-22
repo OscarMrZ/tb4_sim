@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
-  <name>webots_sim</name>
+  <name>tb4_sim</name>
   <version>2023.0.2</version>
   <description>TurtleBot3 Burger robot ROS2 interface for Webots.</description>
 

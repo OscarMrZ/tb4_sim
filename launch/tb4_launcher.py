@@ -24,7 +24,7 @@ def get_ros2_nodes(*args):
         name='turtlebot4',
         robot_description=tb4_description,
         relative_path_prefix=os.path.join(package_dir, 'resource'),
-        translation='0 0 0',
+        translation='6 0 0',
         rotation='0 0 1 -1.5708',
     )
 

@@ -6,7 +6,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="turtlebot4">
 
   <!-- Calculations helper-->
-  <xacro:include filename="$(find webots_sim)/resource/helper.xacro" />
+  <xacro:include filename="$(find tb4_sim)/resource/helper.xacro" />
 
   <!-- Create 3 base definition-->
   <link name="base_link">
@@ -348,7 +348,7 @@
   </gazebo>
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-      <parameters> (find webots_sim)/resource/tb4_control.yaml </parameters>
+      <parameters> (find tb4_sim)/resource/tb4_control.yaml </parameters>
     </plugin>
   </gazebo>
   <joint name="mouse_joint" type="fixed">

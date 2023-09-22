@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
     <!-- tb4 robot -->
-    <xacro:include filename="$(find webots_sim)/resource/tb4_raw.urdf" />
+    <xacro:include filename="$(find tb4_sim)/resource/tb4_raw.urdf" />
 
     <webots>
       

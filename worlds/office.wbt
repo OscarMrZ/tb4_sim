@@ -1,0 +1,2043 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/PaintedWood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Monitor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/ComputerMouse.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/DesktopComputer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Keyboard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/chairs/protos/OfficeChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/GlossyPaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/plants/protos/PottedTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/humans/pedestrian/protos/Pedestrian.proto"
+
+WorldInfo {
+}
+turtlebot4 {
+  children [
+    
+}
+Viewpoint {
+  orientation 0.553611098809068 -0.5415337926818506 -0.6326578085023741 4.273499747323496
+  position -1.2419632719616684 -8.032137827082815 33.43043639975377
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 25 15
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallHeight 3
+  wallAppearance PaintedWood {
+    colorOverride 1 0.745098 0.435294
+  }
+}
+Pedestrian {
+  translation -9.83 -2.37 1.27
+}
+Pedestrian {
+  translation -7.64 0.51 1.37
+  rotation 0 0 1 1.309
+  name "pedestrian(1)"
+}
+PottedTree {
+  translation -0.66 -2.35 0
+}
+DEF elevator Wall {
+  translation -4.52 -2.69 0
+  size 2 2 3
+  appearance BrushedAluminium {
+    colorOverride 0.603922 0.6 0.588235
+  }
+}
+DEF Hole Solid {
+  children [
+    Wall {
+      translation 5.09 -3.92 0
+      rotation 0 0 1 -1.5707953071795862
+      name "wall(4)"
+      size 0.1 7 1
+      appearance GlossyPaint {
+        baseColor 0.178882 0.200992 0.383337
+      }
+    }
+    Wall {
+      translation 5.09 -1.02 0
+      rotation 0 0 1 -1.5707953071795862
+      name "wall(3)"
+      size 0.1 7 1
+      appearance GlossyPaint {
+        baseColor 0.178882 0.200992 0.383337
+      }
+    }
+    Wall {
+      translation 8.64 -2.47 0
+      name "wall(2)"
+      size 0.1 3 1
+      appearance GlossyPaint {
+        baseColor 0.178882 0.200992 0.383337
+      }
+    }
+    Wall {
+      translation 1.54 -2.47 0
+      name "wall(1)"
+      size 0.1 3 1
+      appearance GlossyPaint {
+        baseColor 0.178882 0.200992 0.383337
+      }
+    }
+  ]
+}
+DEF DoubleDesktopRows Solid {
+  children [
+    DEF Desktoprow Solid {
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+    }
+    DEF DesktopInvertedrow Solid {
+      translation 1 0 0
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          rotation 0 0 1 3.141592653589793
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+      name "solid(1)"
+    }
+  ]
+}
+DEF DoubleDesktopRows Solid {
+  translation 4.5 0 0
+  children [
+    DEF Desktoprow Solid {
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+    }
+    DEF DesktopInvertedrow Solid {
+      translation 1 0 0
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          rotation 0 0 1 3.141592653589793
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+      name "solid(1)"
+    }
+  ]
+  name "solid(1)"
+}
+DEF DoubleDesktopRows Solid {
+  translation 9 0 0
+  children [
+    DEF Desktoprow Solid {
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+    }
+    DEF DesktopInvertedrow Solid {
+      translation 1 0 0
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          rotation 0 0 1 3.141592653589793
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+      name "solid(1)"
+    }
+  ]
+  name "solid(2)"
+}
+DEF DoubleDesktopRows Solid {
+  translation 13.5 0 0
+  children [
+    DEF Desktoprow Solid {
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+    }
+    DEF DesktopInvertedrow Solid {
+      translation 1 0 0
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          rotation 0 0 1 3.141592653589793
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+      name "solid(1)"
+    }
+  ]
+  name "solid(3)"
+}
+DEF DoubleDesktopRows Solid {
+  translation 18 0 0
+  children [
+    DEF Desktoprow Solid {
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+    }
+    DEF DesktopInvertedrow Solid {
+      translation 1 0 0
+      children [
+        DEF Desktop Solid {
+          translation -9.82 6.26 0
+          rotation 0 0 1 3.141592653589793
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+        }
+        DEF Desktop Solid {
+          translation -9.82 4.46 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF Desktop Solid {
+          translation -9.82 2.66 0
+          rotation 0 0 1 3.14159
+          children [
+            OfficeChair {
+              translation -0.72 0.47 0
+            }
+            OfficeChair {
+              translation -0.72 -0.46 0
+              name "office chair(1)"
+            }
+            Keyboard {
+              translation -0.2 0.37 0.74
+              rotation 0 1 0 0
+            }
+            Keyboard {
+              translation -0.2 -0.55 0.74
+              rotation 0 1 0 0
+              name "keyboard(1)"
+            }
+            Table {
+              trayAppearance VarnishedPine {
+                colorOverride 1 1 1
+                textureTransform TextureTransform {
+                  scale 10 10
+                }
+              }
+              legAppearance VarnishedPine {
+                colorOverride 0 0 0
+                textureTransform TextureTransform {
+                  scale 4 5
+                }
+              }
+            }
+            Monitor {
+              translation 0.0700001 0.33 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(2)"
+            }
+            Monitor {
+              translation 0.0699889 -0.53 0.74
+              rotation 0 0 1 3.14158
+              name "monitor(1)"
+            }
+            ComputerMouse {
+              translation -0.23 0.1 0.74
+            }
+            ComputerMouse {
+              translation -0.23 -0.81 0.74
+              name "computer mouse(1)"
+            }
+            DesktopComputer {
+              translation -3.71504e-07 -0.14 0.74
+              rotation 0 0 1 3.14159
+            }
+            DesktopComputer {
+              translation 2.06986e-06 0.78 0.74
+              rotation 0 0 1 3.14159
+              name "desktop computer(1)"
+            }
+          ]
+          name "solid(2)"
+        }
+      ]
+      name "solid(1)"
+    }
+  ]
+  name "solid(4)"
+}

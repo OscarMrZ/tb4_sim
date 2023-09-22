@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <!-- tb4 robot -->
+    <xacro:include filename="$(find webots_sim)/resource/tb4_raw.urdf" />
+
+    <webots>
+      
+      <!-- Add scan config -->
+      <device reference="rplidar">
+        <ros>
+          <topicName>/scan</topicName>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>20</updateRate>
+        </ros>
+      </device>
+
+      <plugin type="webots_ros2_driver::Ros2IMU">
+        <enabled>true</enabled>
+        <updateRate>50</updateRate>
+        <topicName>/imu</topicName>
+        <alwaysOn>true</alwaysOn>
+        <frameName>imu_link</frameName>
+        <inertialUnitName>p3d inertial</inertialUnitName>
+        <gyroName>p3d gyro</gyroName>
+      </plugin>
+
+      <plugin type="webots_ros2_control::Ros2Control" />
+
+    </webots>
+
+    <ros2_control name="WebotsControl" type="system">
+      <hardware>
+        <plugin>webots_ros2_control::Ros2ControlSystem</plugin>
+      </hardware>
+      <joint name="right_wheel_joint">
+        <command_interface name="velocity">
+            <param name="min">-20</param>
+            <param name="max">20</param>
+        </command_interface>
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="left_wheel_joint">
+        <command_interface name="velocity">
+            <param name="min">-20</param>
+            <param name="max">20</param>
+        </command_interface>
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+    </ros2_control>
+
+</robot>

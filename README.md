@@ -15,13 +15,23 @@ Welcome to the `tb4_sim` repository! This project provides a basic simulation en
 
 ## Quick Start:
 
-1. **Clone the Repository**:
+1. **Clone the Repository in a ROS ws**:
 ```bash
 git clone https://github.com/yourusername/tb4_sim.git
 ```
+colcon build --symlink-install
 
-2. **Launch the simulation**:
-I have prepared a complete launcher: it launch the world, spawns the robot and interfaces it with the drivers. 
+2. **Install the package**:
+```bash
+colcon build --symlink-install
+source install/setup.bash
+```
+
+3. **Launch the simulation**:
+I have prepared a complete launcher: it launch the world, spawns the robot and interfaces it with the drivers.
+```bash
+ros2 launch tb4_sim tb4_launcher.py
+```
 
 ## Contributing:
 

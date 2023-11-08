@@ -21,6 +21,9 @@
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
   <exec_depend>rviz2</exec_depend>
+  <exec_depend>turtlebot4_description</exec_depend>
+  <exec_depend>irobot_create_description</exec_depend>
+
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>python3-pytest</test_depend>
